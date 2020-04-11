@@ -27,7 +27,8 @@ def Update():
 			STATUS = "Charging"
 		elif AC == "off-line":
 			STATUS = "Discharging"
-
+    
+    # Tried Awesome icons. Didn't work...
 	'''
 	if RETURN_TEXT:
 		pass
@@ -56,7 +57,3 @@ def Update():
 
 def Dzen():
 	return "^fg(" + COLOR + ")" + HEADER + TEXT
-
-def Width(font):
-    w = GetFromShell("dzen2-textwidth " + font + " '" + HEADER + TEXT + "'")
-    return int(w)

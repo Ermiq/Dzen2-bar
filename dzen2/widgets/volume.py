@@ -18,6 +18,8 @@ def Update():
         "echo '" + amixerData + "' | grep -m 1 -oP '(?<= \[).*?(?=%\] )'")
     STATUS = GetFromShell("echo '" + amixerData +
                           "' | grep -m 1 -oP '(?<=%\] \[).*?(?=\])'")
+    
+    # Awesome icons. Doesn't work...
     '''
 	if TEXT == 0:
 		STATUS =   # level 0 (muted icon)
@@ -37,12 +39,8 @@ def Update():
 def Dzen():
     return HEADER + TEXT
 
-def Width(font):
-    w = GetFromShell("dzen2-textwidth " + font + " '" + HEADER + TEXT + "'")
-    return int(w)
-
 #-------------------------------------------------------------
-# Volume change functions:
+# Volume change functions. Not used in this project.:
 
 def IncreaseVolume(step):
     GetFromShell("amixer -q sset Master " + step + "%+ unmute")

@@ -51,7 +51,3 @@ def Update():
 
 def Dzen():
 	return HEADER + TEXT
-
-def Width(font):
-    w = GetFromShell("dzen2-textwidth " + font + " '" + HEADER + "'")
-    return int(w) + INDICATOR_LENGHT

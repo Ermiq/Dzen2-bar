@@ -3,9 +3,12 @@
 import re
 import subprocess
 
+# On some distros you need to change this interface name to "wlan0".
+# For example, Devuan uses "wlan0" name for WiFi.
+INTERFACE = "wlp2s0"
+
 TEXT = ""
 HEADER = "WiFi: "
-INTERFACE = "wlp2s0"
 IS_UP = False
 CONNECTED = False
 QUALITY = 0
@@ -45,7 +48,7 @@ def Update():
 	TEXT = output
 
 def Dzen():
-	# Color depending on connection quality:
+	# Color depends on connection quality:
 	if QUALITY > 80:
 		color = "#00FF00"
 	elif QUALITY == 0:

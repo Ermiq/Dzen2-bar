@@ -34,8 +34,15 @@ kill -9 $(pgrep dzen2)
 # don't restart dzen2; just exit instead:
 [ "$1" = 'stop' ] && exit 0
 
-# Not exiting; proceed then:
+#-----------------------------------------------------------------------------
+# Python bar generator runs in an endless loop and
+# outputs the data for DZEN in stdout every second.
+~/.config/dzen2/bar-generator.py | dzen2 -dock -ta l -u -p
 
+
+
+# Not used in this script:
+#-----------------------------------------------------------------------------
 #FONT="bitstream-terminal-bold-r-normal--5-14-10-10-c-11-iso8859-1"
 FONT="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 BAR_WIDTH=1920
@@ -54,7 +61,3 @@ BLK='#000000'     # black
 SEP="^p(8;)^fg($GRN)^r(2x24)^p(8;)^fg($WHT)"      # item separator block/line
 SLEEP=1           # update interval (whole seconds, no decimals!)
 CHAR=$((20))      # pixel width of characters of font used
-
-# Python bar generator runs in an endless loop and
-# outputs the data for DZEN in stdout every second.
-~/.config/dzen2/bar-generator.py | dzen2 -dock -ta l -u -p

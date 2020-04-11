@@ -15,7 +15,3 @@ def Update():
 
 def Dzen():
     return TEXT
-
-def Width(font):
-    w = GetFromShell("dzen2-textwidth " + font + " '" + TEXT + "'")
-    return int(w)
