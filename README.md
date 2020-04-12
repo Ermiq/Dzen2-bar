@@ -5,6 +5,7 @@ For those who struggle to find some simple examples of dzen2 bar/panel setup.
 
 This is a pretty basic setup, written in Python, could be called a fork of the script published here:
 https://www.linuxquestions.org/questions/linux-general-1/dzen2-status-bar-script-837042/
+
 That was a page where I finally found a super usefull and clear example of how to deal with dzen2.
 
 What's there:
