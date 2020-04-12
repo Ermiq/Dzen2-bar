@@ -18,8 +18,8 @@ What's there:
 
 Installation:
 - Clone or download this repository;
-- Put 'dzen2' folder in yout $HOME/.config directory;
-- Give all files execution permissions;
+- Put 'dzen2' folder in your '$HOME/.config' directory;
+- Give all the files execution permissions;
 - Run 'dzen2-startup.sh' script.
 
 Requirements:
